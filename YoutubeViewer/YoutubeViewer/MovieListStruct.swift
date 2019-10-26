@@ -7,19 +7,22 @@
 //
 
 import UIKit
+import Realm
+import RealmSwift
 
-struct MovieList {
+struct MovieList: Codable {
     let user: user
-    let videos: videos
+    let videos: [video]
 }
 
 struct user: Codable {
     let id: Int
+    let name: String
     let username: String
 }
 
-struct videos: Codable {
-    let id: String
+struct video: Codable {
+    let id: Int
     let name: String
     let link: String
     let imageUrl: String
@@ -30,4 +33,32 @@ struct videos: Codable {
 struct Channel: Codable {
     let name: String
     let profileImageUrl: String
+    let numberOfSubscribers: Int
+}
+
+class MovieListData: Object {
+    @objc dynamic var id: Int = 0
+    @objc dynamic var name: String = ""
+    @objc dynamic var link: String = ""
+    @objc dynamic var imageUrl: String = ""
+    @objc dynamic var numberOfViews: Int = 0
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+}
+
+func setMovieListDataFromAPI(data: MovieList) -> [MovieListData] {
+    var setData: [MovieListData] = []
+    
+    for video in data.videos {
+        let videoData = MovieListData()
+        videoData.id = video.id
+        videoData.name = video.name
+        videoData.link = video.link
+        videoData.imageUrl = video.imageUrl
+        videoData.numberOfViews = video.numberOfViews
+        setData.append(videoData)
+    }
+    return setData
 }

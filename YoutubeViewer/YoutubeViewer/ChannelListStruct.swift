@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Realm
+import RealmSwift
 
 struct ChannelList: Codable {
     let id: id
@@ -23,4 +25,17 @@ struct chencels: Codable {
     let number: Int
     let imageUrl: String
     let link: String
+}
+
+class ChannelListData: Object {
+    @objc dynamic var id: Int = 0
+    @objc dynamic var name: String = ""
+    @objc dynamic var duration: String = ""
+    @objc dynamic var number: Int = 0
+    @objc dynamic var imageUrl: String = ""
+    @objc dynamic var link: String = ""
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }

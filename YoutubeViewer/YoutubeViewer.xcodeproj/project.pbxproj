@@ -14,11 +14,23 @@
 		8859A57F2363D0DB007CDC26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8859A57D2363D0DB007CDC26 /* LaunchScreen.storyboard */; };
 		8859A58A2363D0DB007CDC26 /* YoutubeViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8859A5892363D0DB007CDC26 /* YoutubeViewerTests.swift */; };
 		8859A5952363D0DB007CDC26 /* YoutubeViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8859A5942363D0DB007CDC26 /* YoutubeViewerUITests.swift */; };
-		8859A5A32363D1E9007CDC26 /* MovieListStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8859A5A22363D1E9007CDC26 /* MovieListStruct.swift */; };
 		8859A5A52363D326007CDC26 /* ChannelListStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8859A5A42363D326007CDC26 /* ChannelListStruct.swift */; };
 		88603EEC2363D5FF001CF8ED /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88603EEB2363D5FF001CF8ED /* Alamofire.framework */; };
 		88603EEE2363D60C001CF8ED /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88603EED2363D60C001CF8ED /* Realm.framework */; };
 		88603EF02363D618001CF8ED /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88603EEF2363D618001CF8ED /* RealmSwift.framework */; };
+		886A71E12363D877007DFC55 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A71E02363D877007DFC55 /* APIClient.swift */; };
+		886A71E32363DA5D007DFC55 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886A71E22363DA5D007DFC55 /* XCGLogger.framework */; };
+		886A71E52363DAF2007DFC55 /* Dictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A71E42363DAF2007DFC55 /* Dictionary+JSON.swift */; };
+		886A71E92363DBDB007DFC55 /* MovieListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 886A71E82363DBDB007DFC55 /* MovieListViewController.storyboard */; };
+		886A71EB2363DBF4007DFC55 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A71EA2363DBF4007DFC55 /* MovieListViewController.swift */; };
+		886A71EE2363F19B007DFC55 /* MovieListCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A71EC2363F19B007DFC55 /* MovieListCellTableViewCell.swift */; };
+		886A71EF2363F19B007DFC55 /* MovieListCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886A71ED2363F19B007DFC55 /* MovieListCellTableViewCell.xib */; };
+		886A71F42363F84F007DFC55 /* NoMovieListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A71F22363F84F007DFC55 /* NoMovieListTableViewCell.swift */; };
+		886A71F52363F84F007DFC55 /* NoMovieListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886A71F32363F84F007DFC55 /* NoMovieListTableViewCell.xib */; };
+		886A71F72363F9B3007DFC55 /* RealmInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A71F62363F9B3007DFC55 /* RealmInitializer.swift */; };
+		886A71F92363F9D6007DFC55 /* RealmInitializeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A71F82363F9D6007DFC55 /* RealmInitializeService.swift */; };
+		886A71FB2363FAA2007DFC55 /* MovieListDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A71FA2363FAA2007DFC55 /* MovieListDao.swift */; };
+		886A71FF236401CA007DFC55 /* MovieListStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A71FE236401CA007DFC55 /* MovieListStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,11 +64,23 @@
 		8859A5902363D0DB007CDC26 /* YoutubeViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8859A5942363D0DB007CDC26 /* YoutubeViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeViewerUITests.swift; sourceTree = "<group>"; };
 		8859A5962363D0DB007CDC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8859A5A22363D1E9007CDC26 /* MovieListStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListStruct.swift; sourceTree = "<group>"; };
 		8859A5A42363D326007CDC26 /* ChannelListStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListStruct.swift; sourceTree = "<group>"; };
 		88603EEB2363D5FF001CF8ED /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		88603EED2363D60C001CF8ED /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		88603EEF2363D618001CF8ED /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		886A71E02363D877007DFC55 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		886A71E22363DA5D007DFC55 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
+		886A71E42363DAF2007DFC55 /* Dictionary+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+JSON.swift"; sourceTree = "<group>"; };
+		886A71E82363DBDB007DFC55 /* MovieListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieListViewController.storyboard; sourceTree = "<group>"; };
+		886A71EA2363DBF4007DFC55 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
+		886A71EC2363F19B007DFC55 /* MovieListCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListCellTableViewCell.swift; sourceTree = "<group>"; };
+		886A71ED2363F19B007DFC55 /* MovieListCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListCellTableViewCell.xib; sourceTree = "<group>"; };
+		886A71F22363F84F007DFC55 /* NoMovieListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoMovieListTableViewCell.swift; sourceTree = "<group>"; };
+		886A71F32363F84F007DFC55 /* NoMovieListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoMovieListTableViewCell.xib; sourceTree = "<group>"; };
+		886A71F62363F9B3007DFC55 /* RealmInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmInitializer.swift; sourceTree = "<group>"; };
+		886A71F82363F9D6007DFC55 /* RealmInitializeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmInitializeService.swift; sourceTree = "<group>"; };
+		886A71FA2363FAA2007DFC55 /* MovieListDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListDao.swift; sourceTree = "<group>"; };
+		886A71FE236401CA007DFC55 /* MovieListStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				886A71E32363DA5D007DFC55 /* XCGLogger.framework in Frameworks */,
 				88603EF02363D618001CF8ED /* RealmSwift.framework in Frameworks */,
 				88603EEE2363D60C001CF8ED /* Realm.framework in Frameworks */,
 				88603EEC2363D5FF001CF8ED /* Alamofire.framework in Frameworks */,
@@ -113,11 +138,18 @@
 			children = (
 				8859A5742363D0D9007CDC26 /* AppDelegate.swift */,
 				8859A5762363D0D9007CDC26 /* ViewController.swift */,
+				886A720223640397007DFC55 /* View */,
+				886A71EA2363DBF4007DFC55 /* MovieListViewController.swift */,
+				886A71F62363F9B3007DFC55 /* RealmInitializer.swift */,
+				886A71F82363F9D6007DFC55 /* RealmInitializeService.swift */,
+				886A71FA2363FAA2007DFC55 /* MovieListDao.swift */,
+				886A71E02363D877007DFC55 /* APIClient.swift */,
+				886A71E42363DAF2007DFC55 /* Dictionary+JSON.swift */,
 				8859A5782363D0D9007CDC26 /* Main.storyboard */,
 				8859A57B2363D0DB007CDC26 /* Assets.xcassets */,
 				8859A57D2363D0DB007CDC26 /* LaunchScreen.storyboard */,
 				8859A5802363D0DB007CDC26 /* Info.plist */,
-				8859A5A22363D1E9007CDC26 /* MovieListStruct.swift */,
+				886A71FE236401CA007DFC55 /* MovieListStruct.swift */,
 				8859A5A42363D326007CDC26 /* ChannelListStruct.swift */,
 			);
 			path = YoutubeViewer;
@@ -144,11 +176,24 @@
 		88603EEA2363D5FF001CF8ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				886A71E22363DA5D007DFC55 /* XCGLogger.framework */,
 				88603EEF2363D618001CF8ED /* RealmSwift.framework */,
 				88603EED2363D60C001CF8ED /* Realm.framework */,
 				88603EEB2363D5FF001CF8ED /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		886A720223640397007DFC55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				886A71E82363DBDB007DFC55 /* MovieListViewController.storyboard */,
+				886A71ED2363F19B007DFC55 /* MovieListCellTableViewCell.xib */,
+				886A71EC2363F19B007DFC55 /* MovieListCellTableViewCell.swift */,
+				886A71F32363F84F007DFC55 /* NoMovieListTableViewCell.xib */,
+				886A71F22363F84F007DFC55 /* NoMovieListTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +301,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				886A71E92363DBDB007DFC55 /* MovieListViewController.storyboard in Resources */,
+				886A71F52363F84F007DFC55 /* NoMovieListTableViewCell.xib in Resources */,
 				8859A57F2363D0DB007CDC26 /* LaunchScreen.storyboard in Resources */,
 				8859A57C2363D0DB007CDC26 /* Assets.xcassets in Resources */,
+				886A71EF2363F19B007DFC55 /* MovieListCellTableViewCell.xib in Resources */,
 				8859A57A2363D0D9007CDC26 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +338,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/XCGLogger.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjcExceptionBridging.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -307,9 +357,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8859A5A52363D326007CDC26 /* ChannelListStruct.swift in Sources */,
+				886A71FF236401CA007DFC55 /* MovieListStruct.swift in Sources */,
 				8859A5772363D0D9007CDC26 /* ViewController.swift in Sources */,
-				8859A5A32363D1E9007CDC26 /* MovieListStruct.swift in Sources */,
+				886A71E52363DAF2007DFC55 /* Dictionary+JSON.swift in Sources */,
+				886A71F92363F9D6007DFC55 /* RealmInitializeService.swift in Sources */,
+				886A71FB2363FAA2007DFC55 /* MovieListDao.swift in Sources */,
+				886A71EE2363F19B007DFC55 /* MovieListCellTableViewCell.swift in Sources */,
+				886A71EB2363DBF4007DFC55 /* MovieListViewController.swift in Sources */,
+				886A71F72363F9B3007DFC55 /* RealmInitializer.swift in Sources */,
+				886A71E12363D877007DFC55 /* APIClient.swift in Sources */,
 				8859A5752363D0D9007CDC26 /* AppDelegate.swift in Sources */,
+				886A71F42363F84F007DFC55 /* NoMovieListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
