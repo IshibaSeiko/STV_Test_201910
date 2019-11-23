@@ -42,7 +42,10 @@ class MovieListData: Object {
     @objc dynamic var link: String = ""
     @objc dynamic var imageUrl: String = ""
     @objc dynamic var numberOfViews: Int = 0
-    
+    @objc dynamic var channelName: String = ""
+    @objc dynamic var profileImageUrl: String = ""
+    @objc dynamic var numberOfSubscribers: Int = 0
+
     override static func primaryKey() -> String? {
         return "id"
     }
@@ -58,6 +61,9 @@ func setMovieListDataFromAPI(data: MovieList) -> [MovieListData] {
         videoData.link = video.link
         videoData.imageUrl = video.imageUrl
         videoData.numberOfViews = video.numberOfViews
+        videoData.channelName = video.channel.name
+        videoData.profileImageUrl = video.channel.profileImageUrl
+        videoData.numberOfSubscribers = video.channel.numberOfSubscribers
         setData.append(videoData)
     }
     return setData

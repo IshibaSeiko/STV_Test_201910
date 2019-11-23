@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		575B8F69236C3C94005AB200 /* ChannelDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B8F68236C3C94005AB200 /* ChannelDetailViewController.swift */; };
+		575B8F6B236C3D05005AB200 /* ChannelDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 575B8F6A236C3D05005AB200 /* ChannelDetailViewController.storyboard */; };
+		575B8F70236C3D88005AB200 /* ChannelDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B8F6E236C3D88005AB200 /* ChannelDetailTableViewCell.swift */; };
+		575B8F71236C3D88005AB200 /* ChannelDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575B8F6F236C3D88005AB200 /* ChannelDetailTableViewCell.xib */; };
+		575B8F7323704478005AB200 /* ChannelListAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B8F7223704478005AB200 /* ChannelListAPIClient.swift */; };
+		579D2F802370503A000F6814 /* ChannelListDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579D2F7F2370503A000F6814 /* ChannelListDao.swift */; };
 		8859A5752363D0D9007CDC26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8859A5742363D0D9007CDC26 /* AppDelegate.swift */; };
-		8859A5772363D0D9007CDC26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8859A5762363D0D9007CDC26 /* ViewController.swift */; };
-		8859A57A2363D0D9007CDC26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8859A5782363D0D9007CDC26 /* Main.storyboard */; };
 		8859A57C2363D0DB007CDC26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8859A57B2363D0DB007CDC26 /* Assets.xcassets */; };
 		8859A57F2363D0DB007CDC26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8859A57D2363D0DB007CDC26 /* LaunchScreen.storyboard */; };
 		8859A58A2363D0DB007CDC26 /* YoutubeViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8859A5892363D0DB007CDC26 /* YoutubeViewerTests.swift */; };
@@ -51,10 +55,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		575B8F68236C3C94005AB200 /* ChannelDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailViewController.swift; sourceTree = "<group>"; };
+		575B8F6A236C3D05005AB200 /* ChannelDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChannelDetailViewController.storyboard; sourceTree = "<group>"; };
+		575B8F6E236C3D88005AB200 /* ChannelDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailTableViewCell.swift; sourceTree = "<group>"; };
+		575B8F6F236C3D88005AB200 /* ChannelDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelDetailTableViewCell.xib; sourceTree = "<group>"; };
+		575B8F7223704478005AB200 /* ChannelListAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListAPIClient.swift; sourceTree = "<group>"; };
+		579D2F7F2370503A000F6814 /* ChannelListDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListDao.swift; sourceTree = "<group>"; };
 		8859A5712363D0D9007CDC26 /* YoutubeViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoutubeViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8859A5742363D0D9007CDC26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8859A5762363D0D9007CDC26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8859A5792363D0D9007CDC26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8859A57B2363D0DB007CDC26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8859A57E2363D0DB007CDC26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8859A5802363D0DB007CDC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -137,15 +145,16 @@
 			isa = PBXGroup;
 			children = (
 				8859A5742363D0D9007CDC26 /* AppDelegate.swift */,
-				8859A5762363D0D9007CDC26 /* ViewController.swift */,
 				886A720223640397007DFC55 /* View */,
 				886A71EA2363DBF4007DFC55 /* MovieListViewController.swift */,
+				579D2F7F2370503A000F6814 /* ChannelListDao.swift */,
+				575B8F7223704478005AB200 /* ChannelListAPIClient.swift */,
+				575B8F68236C3C94005AB200 /* ChannelDetailViewController.swift */,
 				886A71F62363F9B3007DFC55 /* RealmInitializer.swift */,
 				886A71F82363F9D6007DFC55 /* RealmInitializeService.swift */,
 				886A71FA2363FAA2007DFC55 /* MovieListDao.swift */,
 				886A71E02363D877007DFC55 /* APIClient.swift */,
 				886A71E42363DAF2007DFC55 /* Dictionary+JSON.swift */,
-				8859A5782363D0D9007CDC26 /* Main.storyboard */,
 				8859A57B2363D0DB007CDC26 /* Assets.xcassets */,
 				8859A57D2363D0DB007CDC26 /* LaunchScreen.storyboard */,
 				8859A5802363D0DB007CDC26 /* Info.plist */,
@@ -187,11 +196,14 @@
 		886A720223640397007DFC55 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				575B8F6E236C3D88005AB200 /* ChannelDetailTableViewCell.swift */,
+				575B8F6F236C3D88005AB200 /* ChannelDetailTableViewCell.xib */,
 				886A71E82363DBDB007DFC55 /* MovieListViewController.storyboard */,
 				886A71ED2363F19B007DFC55 /* MovieListCellTableViewCell.xib */,
 				886A71EC2363F19B007DFC55 /* MovieListCellTableViewCell.swift */,
 				886A71F32363F84F007DFC55 /* NoMovieListTableViewCell.xib */,
 				886A71F22363F84F007DFC55 /* NoMovieListTableViewCell.swift */,
+				575B8F6A236C3D05005AB200 /* ChannelDetailViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -301,12 +313,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				575B8F71236C3D88005AB200 /* ChannelDetailTableViewCell.xib in Resources */,
 				886A71E92363DBDB007DFC55 /* MovieListViewController.storyboard in Resources */,
 				886A71F52363F84F007DFC55 /* NoMovieListTableViewCell.xib in Resources */,
+				575B8F6B236C3D05005AB200 /* ChannelDetailViewController.storyboard in Resources */,
 				8859A57F2363D0DB007CDC26 /* LaunchScreen.storyboard in Resources */,
 				8859A57C2363D0DB007CDC26 /* Assets.xcassets in Resources */,
 				886A71EF2363F19B007DFC55 /* MovieListCellTableViewCell.xib in Resources */,
-				8859A57A2363D0D9007CDC26 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,16 +371,19 @@
 			files = (
 				8859A5A52363D326007CDC26 /* ChannelListStruct.swift in Sources */,
 				886A71FF236401CA007DFC55 /* MovieListStruct.swift in Sources */,
-				8859A5772363D0D9007CDC26 /* ViewController.swift in Sources */,
 				886A71E52363DAF2007DFC55 /* Dictionary+JSON.swift in Sources */,
+				575B8F70236C3D88005AB200 /* ChannelDetailTableViewCell.swift in Sources */,
 				886A71F92363F9D6007DFC55 /* RealmInitializeService.swift in Sources */,
 				886A71FB2363FAA2007DFC55 /* MovieListDao.swift in Sources */,
+				575B8F69236C3C94005AB200 /* ChannelDetailViewController.swift in Sources */,
 				886A71EE2363F19B007DFC55 /* MovieListCellTableViewCell.swift in Sources */,
 				886A71EB2363DBF4007DFC55 /* MovieListViewController.swift in Sources */,
 				886A71F72363F9B3007DFC55 /* RealmInitializer.swift in Sources */,
+				579D2F802370503A000F6814 /* ChannelListDao.swift in Sources */,
 				886A71E12363D877007DFC55 /* APIClient.swift in Sources */,
 				8859A5752363D0D9007CDC26 /* AppDelegate.swift in Sources */,
 				886A71F42363F84F007DFC55 /* NoMovieListTableViewCell.swift in Sources */,
+				575B8F7323704478005AB200 /* ChannelListAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,14 +419,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8859A5782363D0D9007CDC26 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8859A5792363D0D9007CDC26 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8859A57D2363D0DB007CDC26 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

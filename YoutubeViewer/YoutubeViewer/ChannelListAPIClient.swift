@@ -1,28 +1,27 @@
 //
-//  APIClient.swift
+//  ChannelListAPIClient.swift
 //  YoutubeViewer
 //
-//  Created by STV-M025 on 2019/10/26.
+//  Created by 石場清子 on 2019/11/04.
 //  Copyright © 2019 STV-M025. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Alamofire
 
-protocol APIClientType {
-    func fetchCoupons(endPoint: String, completion: @escaping (Swift.Result<Data, Error>) -> Void)
+protocol ChannelListAPIClientType {
+    func fetchChannelList(endPoint: String, parameter: Int, completion: @escaping (Swift.Result<Data, Error>) -> Void)
 }
 
-enum FetchError: Error {
-    case missingData   // データがないとき
-}
-
-class APIClient : APIClientType {
+class ChannelListAPIClient: ChannelListAPIClientType {
     let baseUrl = "http://stv201910.mocklab.io"
-    
-    func fetchCoupons(endPoint: String, completion: @escaping (Swift.Result<Data, Error>) -> Void) {
+
+    func fetchChannelList(endPoint: String, parameter: Int, completion: @escaping (Swift.Result<Data, Error>) -> Void) {
+
+        let param: Parameters = ["id": parameter]
+
         log?.info("\n👆👆👆\nRequestURL:\(baseUrl + endPoint)")
-        Alamofire.request(baseUrl + endPoint, headers: nil).responseData { response in
+        Alamofire.request(baseUrl + endPoint, parameters: param, headers: nil).responseData { response in
             guard let statusCode = response.response?.statusCode else {
                 if let error = response.error {
                     completion(.failure(error))

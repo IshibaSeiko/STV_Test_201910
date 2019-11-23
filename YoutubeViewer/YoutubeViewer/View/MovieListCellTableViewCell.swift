@@ -27,9 +27,9 @@ class MovieListCellTableViewCell: UITableViewCell {
     
     func setLayout(data: MovieListData) {
         thumbnailImageView.image = UIImage(url: data.imageUrl)
-        iconImageView.image = UIImage(url: "")
+        iconImageView.image = UIImage(url: data.profileImageUrl)
         titleLabel.text = data.name
-        movieStatusView.text = "\(data.name)  ・  \(data.numberOfViews)"
+        movieStatusView.text = "\(data.channelName)  ・  \(data.numberOfViews)"
     }
     
 }

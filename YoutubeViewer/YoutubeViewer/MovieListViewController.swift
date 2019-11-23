@@ -13,8 +13,10 @@ class MovieListViewController: UIViewController {
     
     let movieListEndPoint = "/videos"
     let channelListEndPoint = "/chancels"
-    let realm = MovieListDao()
+    let movieListRealm = MovieListDao()
     var movieListDBData: [MovieListData] = []
+
+    let channelListRealm = ChannelListDao()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,7 @@ class MovieListViewController: UIViewController {
         
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         
-        movieListDBData = Array(realm.findAll())
+        movieListDBData = Array(movieListRealm.findAll())
         
         // Do any additional setup after loading the view.
         let apiClient = APIClient()
@@ -43,20 +45,50 @@ class MovieListViewController: UIViewController {
         guard let decodeData = try? decoder.decode(MovieList.self, from: data) else {
             return
         }
-        realm.deleteAll()
-        realm.add(objects: setMovieListDataFromAPI(data: decodeData))
+        movieListRealm.deleteAll()
+        movieListRealm.add(objects: setMovieListDataFromAPI(data: decodeData))
         print(decodeData)
         reloadListData()
     }
     
     func reloadListData() {
-        movieListDBData = Array(realm.findAll())
+        movieListDBData = Array(movieListRealm.findAll())
         movieList.reloadData()
     }
 }
 
+extension MovieListViewController {
+    func decodeChannelList(data: Data) {
+        let decoder = JSONDecoder()
+        guard let decodeData = try? decoder.decode(ChannelList.self, from: data) else {
+            return
+        }
+
+        
+    }
+}
+
 extension MovieListViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        if movieListDBData.count == 0 {
+            return
+        }
+
+        let apiClient = ChannelListAPIClient()
+        apiClient.fetchChannelList(endPoint: channelListEndPoint, parameter: movieListDBData[indexPath.row].id) { (result) in
+            switch result  {
+            case .success(let data):
+                self.decodeMovieList(data: data)
+            case .failure(let error):
+                print(error)
+            }
+        }
+
+        let storyboard: UIStoryboard = UIStoryboard(name: "ChannelDetailViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ChannelDetailViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension MovieListViewController: UITableViewDataSource {
